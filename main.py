@@ -142,7 +142,7 @@ def license_increment_run(req: LicenseRequest):
         keys = ws.col_values(COL_KEY)
         row = len(keys) + 1
         activated_at = fmt_iso(tz_now_gmt7())
-        expires_at = fmt_iso(tz_now_gmt7() + timedelta(days=7))
+        expires_at = fmt_iso(tz_now_gmt7() + timedelta(days=14))
         run_count = 0
         _ensure_row(ws, row, req.machine_key, activated_at, expires_at, run_count)
         created = True
